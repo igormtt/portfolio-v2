@@ -80,7 +80,70 @@
 .skills_container {
   display: flex;
   gap: 3rem;
+  padding-inline: 10rem;
   justify-content: center;
   flex-wrap: wrap;
   
+}
+
+.projetos_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+  margin-top: 4rem;
+
+  padding: 10px;
+}
+
+.projetos {
+  display: flex;
+  width: 100%;
+  /* background-color: #1d8686; */
+  gap: 3rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-block: 20px;
+  padding-inline: 200px;;
+}
+
+.hr {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  height: 4px;
+  width: 75%;
+  background-color: #1d8686;
+  border: none;
+}
+
+.trabalhos {
+  display: flex;
+  margin-top: 80px;
+  flex-direction: column;
+}
+
+.trabalhos_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.contato_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }

@@ -1,8 +1,9 @@
+import { ReactNode } from 'react';
 import styles from './Habilidade.module.css';
 
 interface UIHabilidade {
     nome: string;
-    icone: number
+    icone: ReactNode
 }
 
 export default function Habilidade ({ icone, nome } :UIHabilidade) {

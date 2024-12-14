@@ -5,7 +5,7 @@ export default function Header() {
     <header>
       <div className={styles.container}>
         <div className={styles.logo}>
-          LOGO
+          <p>Igor {"</>"}</p>
         </div>
 
         <div className={styles.links}>

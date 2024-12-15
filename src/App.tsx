@@ -8,6 +8,7 @@ import { DiMysql } from 'react-icons/di';
 import { SiMongodb, SiTypescript } from 'react-icons/si';
 import Projeto from './components/Projeto';
 import { useState } from 'react';
+import Footer from './components/Footer';
 
 export default function App() {
 
@@ -117,12 +118,12 @@ export default function App() {
             </div>
 
             <div className={styles.projetos}>
-              <Projeto description='Projeto feito utilizando a Weather API, solicita ao usuário a cidade desejada, e mostra as condições climáticas atuais, com fundo diferente ao estar de dia ou noite.' image='/weather_app.png' name='Weather App' techs='React, HTML, CSS, consumo de API.' key={Projeto.name} />
-              <Projeto description='Projeto feito utilizando a Weather API, solicita ao usuário a cidade desejada, e mostra as condições climáticas atuais, com fundo diferente ao estar de dia ou noite.' image='/weather_app.png' name='Weather App' techs='React, HTML, CSS, consumo de API.' key={Projeto.name} />
-              <Projeto description='Projeto feito utilizando a Weather API, solicita ao usuário a cidade desejada, e mostra as condições climáticas atuais, com fundo diferente ao estar de dia ou noite.' image='/weather_app.png' name='Weather App' techs='React, HTML, CSS, consumo de API.' key={Projeto.name} />
-              <Projeto description='Projeto feito utilizando a Weather API, solicita ao usuário a cidade desejada, e mostra as condições climáticas atuais, com fundo diferente ao estar de dia ou noite.' image='/weather_app.png' name='Weather App' techs='React, HTML, CSS, consumo de API.' key={Projeto.name} />
-              <Projeto description='Projeto feito utilizando a Weather API, solicita ao usuário a cidade desejada, e mostra as condições climáticas atuais, com fundo diferente ao estar de dia ou noite.' image='/weather_app.png' name='Weather App' techs='React, HTML, CSS, consumo de API.' key={Projeto.name} />
-              <Projeto description='Projeto feito utilizando a Weather API, solicita ao usuário a cidade desejada, e mostra as condições climáticas atuais, com fundo diferente ao estar de dia ou noite.' image='/weather_app.png' name='Weather App' techs='React, HTML, CSS, consumo de API.' key={Projeto.name} />
+              <Projeto description='Projeto feito utilizando a Weather API, solicita ao usuário a cidade desejada, e mostra as condições climáticas atuais, com fundo diferente ao estar de dia ou noite.' image='/weather_app.png' name='Weather App' techs='React, HTML, CSS, consumo de API.' url='https://weather-app-igormtt.vercel.app/' key={Projeto.name} />
+              <Projeto description='Projeto feito em um curso, com React, e seus utensílios, como o React Context, useState, useEffect. Mostra os cursos do professor com as funcionalidades aprendidas nas aulas.' image='/you_flix.png' name='You Flix' techs='React, HTML, CSS, consumo de API.' url='https://you-flix-app.vercel.app/' key={Projeto.name} />
+              <Projeto description='Projeto feito para termos o controle do que está sendo feito e do que ainda será feito durante o seu dia de estudo, gerenciando suas terefas.' image='/todo_list.png' name='To-Do' techs='React, HTML, CSS, consumo de API.' url='https://to-do-react-sooty.vercel.app/' key={Projeto.name} />
+              <Projeto description='Este projeto seria um freelancer meu com uma empresa, mas desistiram bem no início por falta de verba, então quis seguir com a ideia e construi essa landing page.' image='/imperio.png' name='Império Facility' techs='React, HTML, CSS, consumo de API.' url='https://disabled-imperio-facility.vercel.app/' key={Projeto.name} />
+              <Projeto description='Um dos meus primeiros projetos, então é bem simples, consiste em gerar conselhoes automaticamente quando clica no botão.' image='/advices.png' name='Advices' techs='React, HTML, CSS, consumo de API.' url='https://advices-eight.vercel.app/' key={Projeto.name} />
+              <Projeto description='Este é o meu antigo portfólio, foi feito com React e com código css digitado à mão, mas, agora, eu já tenho mais experiência e desenvolvi o atual.' image='/old_portfolio.png' name='V1 Portfólio' techs='React, HTML, CSS, consumo de API.' url='https://portfolio-black-seven-24.vercel.app/' key={Projeto.name} />
             </div>
 
         </div>
@@ -134,7 +135,7 @@ export default function App() {
           </div>
 
           <div className={styles.projetos}>
-          <Projeto description="Site feito em parceria com o dono do escritório de advocacia. Uma landing page interativa, moderna e atraente. Faz captação dos dados dos possíveis clientes por um formulário." image='/Arantes&Resende.png' name='Arantes & Resende' techs='Wordpress, Starter templates, Wp-Forms, Yoast-Seo...' key={Projeto.name} />
+          <Projeto description="Site feito em parceria com o dono do escritório de advocacia. Uma landing page interativa, moderna e atraente. Faz captação dos dados dos possíveis clientes por um formulário." image='/Arantes&Resende.png' name='Arantes & Resende' techs='Wordpress, Starter templates, Wp-Forms, Yoast-Seo...' url='https://arantesresende.com.br/' key={Projeto.name} />
           </div>
 
         </div>
@@ -146,21 +147,37 @@ export default function App() {
           </div>
 
           <div className={styles.formulario}>
+
             <form action="">
 
-              <div>
-                <label htmlFor="nome">Nome</label>
+              <div className={styles.form_container}>
+
+                <div className={styles.label}>
+                  <label htmlFor="nome">Nome</label>
+                </div>
+
                 <input id="nome" type="text" placeholder='Digite seu nome...' value={nome} onChange={(e) => setNome(e.target.value)} />
+
               </div>
 
-              <div>
-                <label htmlFor="email">E-mail</label>
+              <div className={styles.form_container}>
+
+                <div className={styles.label}>
+                  <label htmlFor="email">E-mail</label>
+                </div>
+
                 <input id="email" type="text" placeholder='Digite seu E-mail...' value={email} onChange={(e) => setEmail(e.target.value)} />
+
               </div>
 
-              <div>
-                <label htmlFor="mensagem">Mensagem</label>
+              <div className={styles.form_container}>
+
+                <div className={styles.label}>
+                  <label htmlFor="mensagem">Mensagem</label>
+                </div>
+
                 <textarea id="mensagem" placeholder='Digite sua mensagem...' value={mensagem} onChange={(e) => setMensagem(e.target.value)} />
+
               </div>
 
               <div className={styles.btn}>
@@ -168,11 +185,14 @@ export default function App() {
               </div>
 
             </form>
+
           </div>
 
         </div>
 
       </div>
+
+      <Footer /> 
     </>
   );
 }

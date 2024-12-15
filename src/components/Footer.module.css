@@ -1,0 +1,44 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 80px;
+  background-color: rgb(18, 56, 56);
+  color: #FFF;
+  
+}
+
+.social, .name {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social_icon {
+  display: flex;  
+  padding: 10px;
+} 
+
+.social_icon a {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Faz com que o link herde a cor do elemento pai */
+}
+
+.social_icon a:visited,
+.social_icon a:active {
+  color: inherit; /* Garante que a cor não mude nos estados de interação */
+}
+
+.social_icon a:hover {
+  transition: .1s;
+  color: rgb(143, 143, 143);
+}
+
+.copy {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

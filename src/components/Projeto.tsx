@@ -1,13 +1,16 @@
+import { AiOutlineExport } from 'react-icons/ai';
 import styles from './Projetos.module.css';
+import { FaGithub } from 'react-icons/fa';
 
 interface UIProjetos {
   image: string;
   techs: string;
   name: string;
   description: string;
+  url: string;
 }
 
-export default function Projeto({ image, techs, name, description }: UIProjetos) {
+export default function Projeto({ image, techs, name, description, url }: UIProjetos) {
   
   return(
     <div className={styles.projetos_container}>
@@ -24,7 +27,13 @@ export default function Projeto({ image, techs, name, description }: UIProjetos)
         </div>
 
         <div className={styles.links}>
-          LINKS DEPLOY
+          <div className={styles.link_deploy}>
+            Ver site: <a href={url} target='_blank'><AiOutlineExport /></a>
+          </div>
+
+          <div className={styles.link_deploy}>
+            Ver código: <FaGithub  />
+          </div>
         </div>
 
       </div>

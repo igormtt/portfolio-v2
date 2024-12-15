@@ -147,3 +147,69 @@ hr {
   align-items: center;
   margin-bottom: 40px;
 }
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 2px;
+}
+
+.label {
+  display: flex;
+  align-self: flex-start;
+  font-size: 18px;
+}
+
+.form_container input {
+  display: flex;
+  width: 300px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 17px;
+}
+
+.form_container textarea {
+  max-width: 300px;
+  min-width: 300px;
+  height: 150px;
+  padding: 7px;
+  font-size: 17px;
+}
+
+.btn {
+  padding: 10px;
+}
+
+.btn button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+  background-color: #1d8686;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+
+  font-weight: 600;
+
+}
+
+.btn button:hover {
+  transition: .3s;
+  color: #cbcbcb;
+  background-color: #0c2121;
+}

@@ -130,7 +130,7 @@ export default function App() {
         <div className={styles.trabalhos}>
             
           <div className={styles.trabalhos_title}>
-            <h1>Trabalhos como Freelancer</h1>
+            <h1>Freelancers</h1>
           </div>
 
           <div className={styles.projetos}>
@@ -188,6 +188,7 @@ export default function App() {
           </div>
 
         </div>
+
 
       </div>
 

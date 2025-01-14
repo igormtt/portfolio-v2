@@ -13,12 +13,8 @@ header {
 
 .logo {
   display: flex;
-  margin-left: 100px;
-  align-items: center;
   flex-direction: row;
-  width: 100px;
-  font-weight: bold;
-  font-size: 24px;
+  width: 30%;
 }
 
 .links {
@@ -42,9 +38,14 @@ header {
   color: #aaa;
 }
 
-.changeTheme {
-  display: flex;
-  margin-right: 30px;
-  align-items: center;
-  cursor: pointer;
+@media (max-width: 500px) {
+  .container p {
+    font-size: 14px;
+    padding-inline: 20px;
+    width: 100%;
+  }
+
+  .links {
+    font-size: 12px;
+  }
 }

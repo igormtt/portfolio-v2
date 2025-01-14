@@ -1,17 +1,6 @@
-import { RiMoonFill } from 'react-icons/ri';
-import { BsFillSunFill } from "react-icons/bs";
 import styles from './Header.module.css'
-import { useState } from 'react';
 
 export default function Header() {
-  
-  const [theme, setTheme] = useState<string>("light");
-
-   const changeTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-    console.log('Tema mudado')
-  }
-
   
   return(
     <header>
@@ -42,11 +31,6 @@ export default function Header() {
           </div>
         </div>
 
-        <div className={styles.changeTheme}>
-          <div onClick={changeTheme}>
-            {theme === "light" ? <RiMoonFill size={30} /> : <BsFillSunFill size={30} /> }
-          </div>
-        </div>
       </div>
     </header>
 

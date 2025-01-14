@@ -261,6 +261,7 @@ hr {
   background-color: #0c2121;
 }
 
+
 @media (max-width: 1484px) {
   .secao_1 {
     padding-inline: 5rem;   
@@ -331,28 +332,6 @@ hr {
 }
 
 @media (max-width: 1056px) {
-  .secao_1 {
-    padding-inline: 1rem;   
-  }
-
-  .image_desc img {
-    width: 300px;
-    height: 430px;
-  }
-
-  .paragrafo_desc {
-    width: 100%;
-    padding-inline:10px ;
-  }
-
-  .skills_container {
-    width: 100%;
-    padding-inline: 0rem;
-  }
-
-}
-
-@media (max-width: 1056px) {
   .skills_container {
     width: 100%;
     padding-inline: 0rem;
@@ -369,6 +348,10 @@ hr {
     flex-direction: column;
     align-items: center;
     gap: 4rem;
+  }
+
+  .container {
+    padding-inline: 0rem;
   }
 
   .writer {
@@ -396,6 +379,24 @@ hr {
     height: 310px;
   }
 
-  
+}
+
+@media (max-width: 768px) {
+
+  .image_desc img {
+    width: 350px;
+    height: 310px;
+  }
+
+
+  .paragrafo_desc {
+    width: 80%;
+    padding-inline:10px ;
+  }
+
+  .skills_container {
+    width: 100%;
+    padding-inline: 0rem;
+  }
 
 }

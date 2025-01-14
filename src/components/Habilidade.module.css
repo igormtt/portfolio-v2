@@ -24,3 +24,10 @@
     width: 14rem;
   }
 }
+
+@media (max-width: 768px) {
+  .habilidade {
+    height: 8rem;
+    width: 12rem;
+  }
+}

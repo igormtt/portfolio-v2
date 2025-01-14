@@ -20,7 +20,7 @@ export default function Projeto({ image, techs, name, description, url }: UIProj
           <img src={image} />
         </div>
 
-        <div className={styles.info}>
+        {/* <div className={styles.info}>
           <h2>{name}</h2>
           <p>{description}</p>
           <span>Tecnologias: {techs}</span>
@@ -34,7 +34,7 @@ export default function Projeto({ image, techs, name, description, url }: UIProj
           <div className={styles.link_deploy}>
             Ver código: <FaGithub  />
           </div>
-        </div>
+        </div> */}
 
       </div>
 

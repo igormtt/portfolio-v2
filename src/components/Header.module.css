@@ -41,3 +41,10 @@ header {
   transition: .4s;
   color: #aaa;
 }
+
+.changeTheme {
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+  cursor: pointer;
+}

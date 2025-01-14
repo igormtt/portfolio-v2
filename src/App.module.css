@@ -12,6 +12,7 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 5rem;
+  padding-inline: 6rem;
 }
 
 .texto {
@@ -41,7 +42,8 @@
 .sobre {
   display: flex;
   margin-top: 4rem;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
   flex-direction: column;
   margin-top: 4rem;
@@ -51,11 +53,27 @@
   margin-bottom: 4rem;
 }
 
+.skills_sobre h1 {
+  display: flex;
+  justify-content: center;
+}
+
 .apresentacao {
   display: flex;
   width: 100%;
+  flex-direction: row;
+  gap: 5rem;
   justify-content: space-between;
-  gap: 3rem;
+}
+
+.descricao {
+  display: flex;
+  flex-direction: column;
+}
+
+.paragrafo_desc {
+  width: 80%;
+  text-align: justify;
 }
 
 .image_desc img {
@@ -69,6 +87,30 @@
   color: #1d8686;
 }
 
+.curriculo {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 130px;
+  height: 50px;
+
+  border: 1px solid #0c2121;
+  border-radius: 3px;
+  background-color: #1d8686;
+  color: #FFF;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+
+}
+
+.curriculo:hover {
+  transition: .3s;
+  background-color: #315d5d;
+}
+
 .paragrafo_desc p {
   font-size: 1.1rem;
 }
@@ -80,7 +122,7 @@
 .skills_container {
   display: flex;
   gap: 3rem;
-  padding-inline: 10rem;
+
   justify-content: center;
   flex-wrap: wrap;
   
@@ -120,6 +162,11 @@ hr {
   width: 75%;
   background-color: #1d8686;
   border: none;
+}
+
+.projetos_title {
+  display: flex;
+  justify-content: center;
 }
 
 .trabalhos {
@@ -212,4 +259,143 @@ hr {
   transition: .3s;
   color: #cbcbcb;
   background-color: #0c2121;
+}
+
+@media (max-width: 1484px) {
+  .secao_1 {
+    padding-inline: 5rem;   
+  }
+
+  .texto h1 {
+    font-size: 2rem;
+  }
+  
+  .texto h1 > span {
+    font-size: 2rem;
+  }
+
+  .writer {
+    height: 60px;
+  }
+
+  .writer span{
+    font-size: 2rem;
+  }
+
+  .image img {
+    width: 350px;
+    height: 350px;
+  }
+
+  /* SOBRE */
+
+  .image_desc img {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* HABILIDADES */
+
+  .skills_container {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+
+  /* PROJETOS */
+
+  .projetos {
+    padding: 0;
+    gap: 1rem;
+  }
+
+}
+
+@media (max-width: 1282px) {
+  .secao_1 {
+    padding-inline: 3rem;   
+  }
+
+  .texto h1 {
+    font-size: 1.7rem;
+  }
+
+  
+  .texto h1 > span {
+    font-size: 1.7rem;
+  }
+
+  .writer span{
+    font-size: 1.7rem;
+  }
+
+}
+
+@media (max-width: 1056px) {
+  .secao_1 {
+    padding-inline: 1rem;   
+  }
+
+  .image_desc img {
+    width: 300px;
+    height: 430px;
+  }
+
+  .paragrafo_desc {
+    width: 100%;
+    padding-inline:10px ;
+  }
+
+  .skills_container {
+    width: 100%;
+    padding-inline: 0rem;
+  }
+
+}
+
+@media (max-width: 1056px) {
+  .skills_container {
+    width: 100%;
+    padding-inline: 0rem;
+  }
+
+  .container {
+    padding-inline: 5rem;
+  }
+}
+
+@media (max-width: 875px) {
+  .secao_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .writer {
+    width: 300px;
+  }
+
+  /* SOBRE  */
+
+  .apresentacao {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .paragrafo_desc {
+    align-items: center;
+    width: 70%;
+  }
+
+  .descricao {
+    align-items: center;
+  }
+
+  .image_desc img {
+    width: 350px;
+    height: 310px;
+  }
+
+  
+
 }

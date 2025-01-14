@@ -41,16 +41,19 @@ export default function App() {
           
           <div className={styles.texto}>
             <h1>
-              Olá, <br/> me chamo <span>Igor</span>.
+              Olá, me chamo <span>Igor</span>.
             </h1>
 
             <span className={styles.writer}>
               <Typewriter words={words} typeSpeed={90} deleteSpeed={90} loop={true} cursor={true} cursorBlinking={true} cursorColor='violet' />
             </span>
-                        <div>
-                          CV 
-                        </div>
+
+          <div>
+            <button className={styles.curriculo}>Baixar CV</button>             
           </div>     
+
+          </div>
+
 
           <div className={styles.image}>
             <img src="/sain.jpg" />
@@ -77,10 +80,6 @@ export default function App() {
             </div>
 
             <div className={styles.descricao}>
-              
-              <div className={styles.titulo_desc}>
-                <h2>Olá!</h2>
-              </div>
 
               <div className={styles.paragrafo_desc}>
                 <p>

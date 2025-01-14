@@ -17,3 +17,10 @@
   transition: ease-in .2s;
   scale: 1.01;
 }
+
+@media (max-width: 875px) {
+  .habilidade {
+    height: 10rem;
+    width: 14rem;
+  }
+}

@@ -117,12 +117,12 @@ export default function App() {
             </div>
 
             <div className={styles.projetos}>
-              <Projeto description='Projeto feito utilizando a Weather API, solicita ao usuário a cidade desejada, e mostra as condições climáticas atuais, com fundo diferente ao estar de dia ou noite.' image='/weather_app.png' name='Weather App' techs='React, HTML, CSS, consumo de API.' url='https://weather-app-igormtt.vercel.app/' key={Projeto.name} />
-              <Projeto description='Projeto feito em um curso, com React, e seus utensílios, como o React Context, useState, useEffect. Mostra os cursos do professor com as funcionalidades aprendidas nas aulas.' image='/you_flix.png' name='You Flix' techs='React, HTML, CSS, consumo de API.' url='https://you-flix-app.vercel.app/' key={Projeto.name} />
-              <Projeto description='Projeto feito para termos o controle do que está sendo feito e do que ainda será feito durante o seu dia de estudo, gerenciando suas terefas.' image='/todo_list.png' name='To-Do' techs='React, HTML, CSS, consumo de API.' url='https://to-do-react-sooty.vercel.app/' key={Projeto.name} />
-              <Projeto description='Este projeto seria um freelancer meu com uma empresa, mas desistiram bem no início por falta de verba, então quis seguir com a ideia e construi essa landing page.' image='/imperio.png' name='Império Facility' techs='React, HTML, CSS, consumo de API.' url='https://disabled-imperio-facility.vercel.app/' key={Projeto.name} />
-              <Projeto description='Um dos meus primeiros projetos, então é bem simples, consiste em gerar conselhoes automaticamente quando clica no botão.' image='/advices.png' name='Advices' techs='React, HTML, CSS, consumo de API.' url='https://advices-eight.vercel.app/' key={Projeto.name} />
-              <Projeto description='Este é o meu antigo portfólio, foi feito com React e com código css digitado à mão, mas, agora, eu já tenho mais experiência e desenvolvi o atual.' image='/old_portfolio.png' name='V1 Portfólio' techs='React, HTML, CSS, consumo de API.' url='https://portfolio-black-seven-24.vercel.app/' key={Projeto.name} />
+              <Projeto image='/weather_app.png' key={Projeto.name} />
+              <Projeto image='/you_flix.png'  key={Projeto.name} />
+              <Projeto image='/todo_list.png' key={Projeto.name} />
+              <Projeto  image='/imperio.png' key={Projeto.name} />
+              <Projeto image='/advices.png'  key={Projeto.name} />
+              <Projeto  image='/old_portfolio.png' key={Projeto.name} />
             </div>
 
         </div>

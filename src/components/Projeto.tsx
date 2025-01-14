@@ -1,16 +1,16 @@
-import { AiOutlineExport } from 'react-icons/ai';
+// import { AiOutlineExport } from 'react-icons/ai';
 import styles from './Projetos.module.css';
-import { FaGithub } from 'react-icons/fa';
+// import { FaGithub } from 'react-icons/fa';
 
 interface UIProjetos {
   image: string;
-  techs: string;
-  name: string;
-  description: string;
-  url: string;
+  techs?: string;
+  name?: string;
+  description?: string;
+  url?: string;
 }
 
-export default function Projeto({ image, techs, name, description, url }: UIProjetos) {
+export default function Projeto({ image }: UIProjetos) {
   
   return(
     <div className={styles.projetos_container}>

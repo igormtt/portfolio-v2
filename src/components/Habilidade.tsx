@@ -1,23 +1,19 @@
-import { ReactNode } from 'react';
-import styles from './Habilidade.module.css';
+import { ReactNode } from "react";
+import styles from "./Habilidade.module.css";
 
 interface UIHabilidade {
-    nome: string;
-    icone: ReactNode
+  nome: string;
+  icone: ReactNode;
 }
 
-export default function Habilidade ({ icone, nome } :UIHabilidade) {
-  return(
+export default function Habilidade({ icone, nome }: UIHabilidade) {
+  return (
     <div className={styles.habilidade}>
-      
       <div>
-        <h3>{nome}</h3>
+        <h1>{nome}</h1>
       </div>
 
-      <div>
-        {icone}
-      </div>
-
+      <div>{icone}</div>
     </div>
   );
 }

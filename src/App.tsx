@@ -18,6 +18,7 @@ import Projeto from "./components/Projeto/Projeto";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import { RiNextjsFill } from "react-icons/ri";
+import { BsSend } from "react-icons/bs";
 
 export default function App() {
   const icons: React.ReactNode[] = [
@@ -245,7 +246,7 @@ export default function App() {
                 <input
                   id="nome"
                   type="text"
-                  placeholder="Digite seu nome..."
+                  placeholder="Digite seu nome"
                   value={nome}
                   onChange={(e) => setNome(e.target.value)}
                 />
@@ -259,7 +260,7 @@ export default function App() {
                 <input
                   id="email"
                   type="text"
-                  placeholder="Digite seu E-mail..."
+                  placeholder="Digite seu E-mail"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -272,14 +273,14 @@ export default function App() {
 
                 <textarea
                   id="mensagem"
-                  placeholder="Digite sua mensagem..."
+                  placeholder="Como posso ajudar?"
                   value={mensagem}
                   onChange={(e) => setMensagem(e.target.value)}
                 />
               </div>
 
               <div className={styles.btn}>
-                <button onClick={contactForm}>Enviar</button>
+                <button onClick={contactForm}> Enviar <BsSend size={19} /> </button>
               </div>
             </form>
             ) : (

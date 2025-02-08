@@ -19,6 +19,7 @@ import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import { RiNextjsFill } from "react-icons/ri";
 import { BsSend } from "react-icons/bs";
+import { Toaster, toast } from "react-hot-toast";
 
 export default function App() {
   const icons: React.ReactNode[] = [
@@ -53,15 +54,30 @@ export default function App() {
     "Nest",
   ];
 
-  const [ sumited, setIsSubmited] = useState<boolean>(false);
-
   async function contactForm(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
-    
-    setTimeout(() => {
-      setIsSubmited(true)
-    }, 100 )
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
 
+    if (!nome || !email || !mensagem) {
+      toast.error("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      toast.error("Favor, preencher o e-mail corretamente.");
+      return;
+    }
+
+    const message = `Olá, meu nome é ${nome}. \nE-mail: ${email} \nMensagem: ${mensagem}`;
+    const whatsappURL = `https://wa.me/5521996587072?text=${encodeURIComponent(
+      message
+    )}`;
+
+    toast.success("Redirecionando...");
+
+    setTimeout(() => {
+      window.open(whatsappURL, "_blank");
+    }, 1500);
   }
 
   return (
@@ -89,6 +105,7 @@ export default function App() {
             <p className={styles.subtitle}>
               Desde Junho de 2022 estou aprimorando minhas habilidades em
               JavaScript, TypeScript, React, Node, MySql, MongoDB, Next e Nest.
+              E agora, estou começando os meus estudos em AWS.
             </p>
 
             <div className={styles.social}>
@@ -134,7 +151,6 @@ export default function App() {
           <div className={styles.image}>
             <img src="/social2.jpg" />
           </div>
-
         </div>
 
         <div id="sobre" className={styles.sobre}>
@@ -150,15 +166,16 @@ export default function App() {
             <div className={styles.descricao}>
               <div className={styles.paragrafo_desc}>
                 <p>
-                  Sou desenvolvedor web e técnico de Informática,
-                  atualmente cursando o 4º semestre de Análise e Desenvolvimento
-                  de Sistemas. Tenho experiência prática em projetos com <strong>Node.js
-                  e React.js utilizando TypeScript</strong>, além de conhecimentos
-                  sólidos em HTML, CSS, JavaScript, MySQL e MongoDB. No momento,
-                  estou aprofundando meus estudos em <strong> Next e AWS </strong> para ampliar minhas
-                  habilidades técnicas. Sou apaixonado por tecnologia e
-                  desenvolvimento web, sempre buscando novos desafios que
-                  me permitam aprender e contribuir com soluções inovadoras.
+                  Sou desenvolvedor web e técnico de Informática, atualmente
+                  cursando o 4º semestre de Análise e Desenvolvimento de
+                  Sistemas. Tenho experiência prática em projetos com{" "}
+                  <strong>Node.js e React.js utilizando TypeScript</strong>,
+                  além de conhecimentos sólidos em HTML, CSS, JavaScript, MySQL
+                  e MongoDB. No momento, estou aprofundando meus estudos em{" "}
+                  <strong> Next e AWS </strong> para ampliar minhas habilidades
+                  técnicas. Sou apaixonado por tecnologia e desenvolvimento web,
+                  sempre buscando novos desafios que me permitam aprender e
+                  contribuir com soluções inovadoras.
                 </p>
               </div>
             </div>
@@ -186,32 +203,26 @@ export default function App() {
             <Projeto
               url="https://weather-app-ivory-eight-25.vercel.app/"
               image="/weather_app.png"
-              key={Projeto.name}
             />
             <Projeto
               url="https://you-flix-app.vercel.app/"
               image="/you_flix.png"
-              key={Projeto.name}
             />
             <Projeto
               url="https://to-do-react-sooty.vercel.app/"
               image="/todo_list.png"
-              key={Projeto.name}
             />
             <Projeto
               url="https://disabled-imperio-facility.vercel.app/"
               image="/imperio.png"
-              key={Projeto.name}
             />
             <Projeto
               url="https://advices-eight.vercel.app/"
               image="/advices.png"
-              key={Projeto.name}
             />
             <Projeto
               url="https://portfolio-black-seven-24.vercel.app/"
               image="/old_portfolio.png"
-              key={Projeto.name}
             />
           </div>
         </div>
@@ -236,8 +247,7 @@ export default function App() {
           </div>
 
           <div className={styles.formulario}>
-            {!sumited ? (
-              <form action="">
+            <form action="">
               <div className={styles.form_container}>
                 <div className={styles.label}>
                   <label htmlFor="nome">Nome</label>
@@ -259,7 +269,7 @@ export default function App() {
 
                 <input
                   id="email"
-                  type="text"
+                  type="email"
                   placeholder="Digite seu E-mail"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -280,13 +290,13 @@ export default function App() {
               </div>
 
               <div className={styles.btn}>
-                <button onClick={contactForm}> Enviar <BsSend size={19} /> </button>
+                <button type="submit" onClick={contactForm}>
+                  {" "}
+                  Enviar <BsSend size={19} />{" "}
+                </button>
               </div>
+              <Toaster position="top-left" />
             </form>
-            ) : (
-              <p>API está sendo desenvolvida! Entrar em contato: 2199658-7072 ou <span style={{ color: "blue" }}>igorg6149@gmail.com</span> </p>
-            )}
-            
           </div>
         </div>
       </div>

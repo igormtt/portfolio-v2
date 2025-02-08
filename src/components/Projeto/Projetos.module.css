@@ -16,10 +16,14 @@
   position: relative;
 }
 
-.projeto:hover {
-  animation: ease-in-out;
-  transition: .3s;
-  transform: translateY(-10px);
+.projetos_container:hover img {
+  -webkit-transform: scale(1.05);
+   transform: scale(1.05);
+}
+
+.projetos_container img{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
 }
 
 .image img {

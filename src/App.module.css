@@ -25,7 +25,6 @@
 .texto > h1 {
   font-size: 48px;
   font-weight: 300;
-  margin-bottom: 10px;
 }
 
 .texto h1 > span {
@@ -46,6 +45,7 @@
 .image img {
   width: 400px;
   height: 400px;
+  border-radius: 10px;
 }
 
 .sobre {
@@ -196,20 +196,6 @@
   padding-inline: 200px;;
 }
 
-.hr {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-hr {
-  height: 4px;
-  width: 75%;
-  background-color: #1d8686;
-  border: none;
-}
-
 .projetos_title {
   display: flex;
   justify-content: center;
@@ -290,7 +276,7 @@ hr {
   align-items: center;
   width: 300px;
   height: 40px;
-  background-color: #1d8686;
+  background-color: #000;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -430,13 +416,17 @@ hr {
 
 @media (max-width: 768px) {
 
+  .writer {
+    margin-bottom: 20px;;
+  }
+
   .image_desc img {
     width: 350px;
     height: 310px;
   }
 
   .paragrafo_desc {
-    width: 80%;
+    width: 100%;
     padding-inline:10px ;
   }
 
@@ -449,4 +439,11 @@ hr {
     margin-top: 70px;
   }
 
+}
+
+@media (max-width: 500px) {
+  .paragrafo_desc {
+    width: 100%;
+    text-align: center;
+  }
 }

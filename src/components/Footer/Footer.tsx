@@ -36,7 +36,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.copy}>
-        <p>&copy; 2024 copyright todos os direitos reservados.</p>
+        <p>&copy; 2025 copyright todos os direitos reservados.</p>
       </div>
     </footer>
   );

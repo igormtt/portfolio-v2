@@ -27,19 +27,19 @@ export default function Header() {
 
         <nav className={`${styles.links} ${menuOpen ? styles.active : ""}`}>
           <div className={styles.link}>
-            <a href="#">Home</a>
+            <a href="#secao_1">Home</a>
           </div>
           <div className={styles.link}>
-            <a href="#">Sobre</a>
+            <a href="#sobre">Sobre</a>
           </div>
           <div className={styles.link}>
-            <a href="#">Skills</a>
+            <a href="#skills">Skills</a>
           </div>
           <div className={styles.link}>
-            <a href="#">Projetos</a>
+            <a href="#projetos_container">Projetos</a>
           </div>
           <div className={styles.link}>
-            <a href="#">Contato</a>
+            <a href="#form_container">Contato</a>
           </div>
         </nav>
       </div>

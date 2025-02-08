@@ -1,6 +1,6 @@
 import styles from "./App.module.css";
-import Habilidade from "./components/Habilidade";
-import Header from "./components/Header";
+import Habilidade from "./components/Habilidade/Habilidade";
+import Header from "./components/Header/Header";
 import { Typewriter } from "react-simple-typewriter";
 import {
   FaReact,
@@ -14,9 +14,9 @@ import {
 import { IoLogoJavascript } from "react-icons/io5";
 import { DiMysql } from "react-icons/di";
 import { SiMongodb, SiNestjs, SiTypescript } from "react-icons/si";
-import Projeto from "./components/Projeto";
+import Projeto from "./components/Projeto/Projeto";
 import { useState } from "react";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import { RiNextjsFill } from "react-icons/ri";
 
 export default function App() {
@@ -52,11 +52,22 @@ export default function App() {
     "Nest",
   ];
 
+  const [ sumited, setIsSubmited] = useState<boolean>(false);
+
+  async function contactForm(e: React.MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    
+    setTimeout(() => {
+      setIsSubmited(true)
+    }, 100 )
+
+  }
+
   return (
     <>
       <Header />
 
-      <div className={styles.container}>
+      <div id="secao_1" className={styles.container}>
         <div className={styles.secao_1}>
           <div className={styles.texto}>
             <h1>
@@ -75,9 +86,8 @@ export default function App() {
             </span>
 
             <p className={styles.subtitle}>
-              Desenvolvedor Full Stack, com habilidaes em React, Node JS,
-              TypeScript e outras bibliotecas. Com desejo de entrar na área da
-              programação.
+              Desde Junho de 2022 estou aprimorando minhas habilidades em
+              JavaScript, TypeScript, React, Node, MySql, MongoDB, Next e Nest.
             </p>
 
             <div className={styles.social}>
@@ -121,43 +131,40 @@ export default function App() {
           </div>
 
           <div className={styles.image}>
-            <img src="/sain.jpg" />
+            <img src="/social2.jpg" />
           </div>
+
         </div>
 
-        <div className={styles.sobre}>
+        <div id="sobre" className={styles.sobre}>
           <div className={styles.titulo_sobre}>
-            <h1>Sobre mim</h1>
-
-            <div className={styles.hr}>
-              <hr />
-            </div>
+            <h1>Sobre Mim</h1>
           </div>
 
           <div className={styles.apresentacao}>
             <div className={styles.image_desc}>
-              <img src="/sain.jpg" />
+              <img src="/Logo Igor Motta.png" />
             </div>
 
             <div className={styles.descricao}>
               <div className={styles.paragrafo_desc}>
                 <p>
-                  Me chamo Igor, tenho 20 anos e sou desenvolvedor web. Sou
-                  técnico de Informática e estou atualmente me graduando, no 4º
-                  semestre, em Análise e Desenvolvimento de Sistemas. Tenho
-                  experiências em projetos com Node.js e React.js com
-                  TypeScript, além de conhecimentos sólidos em HTML, CSS,
-                  JavaScript, MySql e MongoDB. Estou começando meu estudos em
-                  Python para aprimorar os meus conhecimentos cada vez mais.
-                  Estou sempre em busca de novos conhecimentos e desafios, e
-                  espero poder contribuir com o crescimento de sua empresa.
+                  Sou desenvolvedor web e técnico de Informática,
+                  atualmente cursando o 4º semestre de Análise e Desenvolvimento
+                  de Sistemas. Tenho experiência prática em projetos com <strong>Node.js
+                  e React.js utilizando TypeScript</strong>, além de conhecimentos
+                  sólidos em HTML, CSS, JavaScript, MySQL e MongoDB. No momento,
+                  estou aprofundando meus estudos em <strong> Next e AWS </strong> para ampliar minhas
+                  habilidades técnicas. Sou apaixonado por tecnologia e
+                  desenvolvimento web, sempre buscando novos desafios que
+                  me permitam aprender e contribuir com soluções inovadoras.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className={styles.skills}>
+        <div id="skills" className={styles.skills}>
           <div className={styles.skills_sobre}>
             <h1>Minhas Habilidades</h1>
           </div>
@@ -169,7 +176,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className={styles.projetos_container}>
+        <div id="projetos_container" className={styles.projetos_container}>
           <div className={styles.projetos_title}>
             <h1>Projetos</h1>
           </div>
@@ -222,13 +229,14 @@ export default function App() {
           </div>
         </div>
 
-        <div className={styles.contato}>
+        <div id="form_container" className={styles.contato}>
           <div className={styles.contato_title}>
             <h1>Entre em contato!</h1>
           </div>
 
           <div className={styles.formulario}>
-            <form action="">
+            {!sumited ? (
+              <form action="">
               <div className={styles.form_container}>
                 <div className={styles.label}>
                   <label htmlFor="nome">Nome</label>
@@ -271,9 +279,13 @@ export default function App() {
               </div>
 
               <div className={styles.btn}>
-                <button>Enviar</button>
+                <button onClick={contactForm}>Enviar</button>
               </div>
             </form>
+            ) : (
+              <p>API está sendo desenvolvida! Entrar em contato: 2199658-7072 ou <span style={{ color: "blue" }}>igorg6149@gmail.com</span> </p>
+            )}
+            
           </div>
         </div>
       </div>

@@ -6,20 +6,6 @@
   box-sizing: border-box;
   font-family: "Sora", serif;
   scroll-behavior: smooth;
-  animation: fadeInFromLeft 1s;
-}
-
-
-/* Definindo a animação para o efeito de fade e movimento da esquerda */
-@keyframes fadeInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%); /* Começa fora da tela, à esquerda */
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0); /* Finaliza na posição original */
-  }
 }
 
 ::selection {

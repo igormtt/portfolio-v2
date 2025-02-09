@@ -94,7 +94,7 @@ export default function App() {
             <span className={styles.writer}>
               <Typewriter
                 words={words}
-                typeSpeed={90}
+                typeSpeed={120}
                 deleteSpeed={40}
                 cursor={true}
                 cursorBlinking={true}

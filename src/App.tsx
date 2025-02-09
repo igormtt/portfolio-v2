@@ -224,6 +224,10 @@ export default function App() {
               url="https://portfolio-black-seven-24.vercel.app/"
               image="/old_portfolio.png"
             />
+            <Projeto
+              url="https://ignite-feed-psi-orcin.vercel.app/"
+              image="/ignite-feed.png"
+            />
           </div>
         </div>
 

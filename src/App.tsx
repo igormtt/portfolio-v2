@@ -213,16 +213,8 @@ export default function App() {
               image="/todo_list.png"
             />
             <Projeto
-              url="https://disabled-imperio-facility.vercel.app/"
-              image="/imperio.png"
-            />
-            <Projeto
-              url="https://advices-eight.vercel.app/"
-              image="/advices.png"
-            />
-            <Projeto
-              url="https://portfolio-black-seven-24.vercel.app/"
-              image="/old_portfolio.png"
+              url="https://ignite-coffee-three.vercel.app/"
+              image="/igniteCoffee.png"
             />
             <Projeto
               url="https://ignite-feed-psi-orcin.vercel.app/"

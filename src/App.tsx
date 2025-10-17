@@ -220,6 +220,10 @@ export default function App() {
               url="https://ignite-feed-psi-orcin.vercel.app/"
               image="/ignite-feed.png"
             />
+            <Projeto
+              url="https://github-blog-ee2p.vercel.app/"
+              image="/github-blog.png"
+            />
           </div>
         </div>
 
